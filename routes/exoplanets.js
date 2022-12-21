@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-
+const checkNames = require('../services/checkNames.js');
 
 const Exoplanet = require('../models/Exoplanet.js');
 
@@ -13,6 +13,7 @@ router.get('/', (req, res, next) => {
 /* POST add exoplanet. */
 router.post('/add', (req, res, next) => {
   console.log("POST ADD EXOPLANET");
+  if (!checkNames.checkUniqueName(req.body.uniqueNameExoplanet)) return res.sendStatus(400);
   Exoplanet.save({
     uniqueName: req.body.uniqueNameExoplanet,
     hClass: req.body.hClassExoplanet,
