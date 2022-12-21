@@ -10,5 +10,8 @@ describe("checkNames test",() => {
         const result = checkNames('trappist-01');
         expect(result).toBeFalsy();
     })
-
+    test('3: test name contains others specialsChars', () => {
+        const result = checkNames('trappist-@@01');
+        expect(result).toBeFalsy();
+    })
 });
