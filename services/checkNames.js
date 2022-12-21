@@ -1,8 +1,15 @@
 /*eslint-disable*/
 const checkNames = (name) => {
+    return isUpperCase(name) && specialChars(name)
+}
+
+const isUpperCase = (name) => {
+    return name === name.toUpperCase();
+}
+
+const specialChars = (name) => {
     const specialChars = /^[-.a-zA-Z0-9]*$/;
-    if (name === name.toUpperCase() && specialChars.test(name)) return true;
-    return false
+    return specialChars.test(name);
 }
 
 module.exports = checkNames;
