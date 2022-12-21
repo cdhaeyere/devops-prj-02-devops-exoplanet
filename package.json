@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "commit": "cz"
+    "commit": "cz",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write ."
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -17,7 +19,8 @@
   "devDependencies": {
     "commitizen": "^4.2.6",
     "cz-conventional-changelog": "^3.3.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "prettier": "2.8.1"
   },
   "config": {
     "commitizen": {
