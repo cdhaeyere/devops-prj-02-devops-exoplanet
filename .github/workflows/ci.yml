@@ -1,17 +1,17 @@
 name: prj02 exoplanets CI
 
 on:
-  pull_request:
-    branches: [ main ]
+    pull_request:
+        branches: [main]
 
 jobs:
-  check_code:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16.17
-      - run: npm ci
-      - run: npm run code:fix
-      - run: npm run test
+    check_code:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 16.17
+            - run: npm ci
+            - run: npm run code:fix
+            - run: npm run test
