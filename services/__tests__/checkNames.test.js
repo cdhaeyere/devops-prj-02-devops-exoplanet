@@ -16,6 +16,6 @@ describe("checkNames test",() => {
     })
     test('4: test from course', () => {
         const result = checkNames('Trappiste$****01****-00');
-        expect(result).toBeTruthy();
+        expect(result).toBeFalsy();
     })
 });
