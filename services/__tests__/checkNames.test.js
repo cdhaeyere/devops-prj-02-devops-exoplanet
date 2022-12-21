@@ -1,4 +1,5 @@
-const { checkNames } = require("../checkNames");
+/*eslint-disable*/
+const checkNames = require("../checkNames");
 
 describe("checkNames test",() => {
     test('1: test failed',() => {
