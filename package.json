@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "commit": "cz"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -14,6 +15,13 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
+    "commitizen": "^4.2.6",
+    "cz-conventional-changelog": "^3.3.0",
     "nodemon": "^2.0.15"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
