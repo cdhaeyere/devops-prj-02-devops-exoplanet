@@ -13,3 +13,4 @@ jobs:
         with:
           node-version: 16.17
       - run: npm ci
+      - run: npm run code:fix
