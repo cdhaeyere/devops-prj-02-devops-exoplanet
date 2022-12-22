@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const checkNames = require('../services/checkNames.js');
+const checkNames = require("../services/checkNames");
 
 const Exoplanet = require('../models/Exoplanet.js');
 
@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 /* POST add exoplanet. */
 router.post('/add', (req, res, next) => {
   console.log("POST ADD EXOPLANET");
-  if (!checkNames.checkUniqueName(req.body.uniqueNameExoplanet)) return res.sendStatus(400);
+  if (!checkNames(req.body.uniqueNameExoplanet)) return res.status(400).send('Bad Request: Name is not valid');
   Exoplanet.save({
     uniqueName: req.body.uniqueNameExoplanet,
     hClass: req.body.hClassExoplanet,
