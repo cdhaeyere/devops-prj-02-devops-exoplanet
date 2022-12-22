@@ -1,4 +1,3 @@
-/*eslint-disable*/
 const checkNames = (name) => {
     return isUpperCase(name) && specialChars(name)
 }

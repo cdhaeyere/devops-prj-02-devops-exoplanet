@@ -1,4 +1,3 @@
-/*eslint-disable*/
 const checkNames = require("../checkNames");
 
 describe("checkNames test",() => {
